@@ -3,9 +3,11 @@
     12122{{ content }}
     <table style="margin: 0 auto">
       <!-- 设置居中,如果没获取到内容则不显示 -->
-      <tr><th v-for="h in content[0]" :key="h.id">{{h}}</th></tr>  
-      <tr v-for="row in content.slice(1,)" :key=row.id>
-        <td v-for="item in row" :key=item.id>{{item}}</td>
+      <tr>
+        <th v-for="h in content[0]" :key="h.id">{{ h }}</th>
+      </tr>
+      <tr v-for="row in content.slice(1)" :key="row.id">
+        <td v-for="item in row" :key="item.id">{{ item }}</td>
       </tr>
     </table>
   </div>
@@ -26,7 +28,7 @@ export default {
   },
   created() {
     console.log(1232311);
-    var url = "./mingzi1.xlsx"; //放在public目录下的文件可以直接访问
+    var url = "./mingzi2.xlsx"; //放在public目录下的文件可以直接访问
 
     //读取二进制excel文件,参考https://github.com/SheetJS/js-xlsx#utility-functions
     axios
@@ -36,6 +38,7 @@ export default {
         console.log(res);
         var data = new Uint8Array(res.data);
         var wb = XLSX.read(data, { type: "array" });
+        console.log(wb);
         var sheets = wb.Sheets;
         let str = this.ab2str(res.data);
         console.log(str);

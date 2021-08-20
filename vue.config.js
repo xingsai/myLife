@@ -14,8 +14,8 @@ module.exports = {
     // 输出文件目录
     outputDir: 'dist',
     // eslint-loader 是否在保存的时候检查
-    lintOnSave: false,
-    transpileDependencies: ['vue','element-ui','sm-crypto'], // 默认babel-loader忽略mode_modules，这里可增加例外的依赖包名
+    //lintOnSave: false,
+    transpileDependencies: ['vue', 'element-ui', 'sm-crypto'], // 默认babel-loader忽略mode_modules，这里可增加例外的依赖包名
     // use the full build with in-browser compiler?
     // https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
     runtimeCompiler: false,
@@ -26,9 +26,9 @@ module.exports = {
         config.optimization.minimize(true);
         // 分割代码
         config.optimization.splitChunks({
-        chunks: 'all'
+            chunks: 'all'
         });
-         // 移除 prefetch 插件
+        // 移除 prefetch 插件
         config.plugins.delete('prefetch')
         // 移除 preload 插件
         config.plugins.delete('preload');
@@ -37,30 +37,30 @@ module.exports = {
         // config.entry.app = ["babel-polyfill", "./src/main.js"];
         config.entry.app = ["./src/main.js"];
         // 用cdn方式引入
-    //     config.externals = {
-    //         'vue': 'Vue',
-    //         'vuex': 'Vuex',
-    //         'vue-router': 'VueRouter',
-    //         'axios': 'axios',
-    //         'element-ui':'ELEMENT',
-    //         'lodash':'_',
-    //         'echarts':'echarts'
-    //     }
-    //     // 为生产环境修改配置...
-    //     config.plugins.push(
-    //        new TerserPlugin({
-    //            parallel: true,
-    //            sourceMap: true,
-    //            terserOptions: {
-    //                warnings: false,
-    //                compress: {
-    //                    drop_console: true,// 注释console
-    //                    drop_debugger: true, // 注释debugger
-    //                    pure_funcs: ["console.log"], //移除console
-    //                }
-    //            }
-    //        })
-    //    )
+        //     config.externals = {
+        //         'vue': 'Vue',
+        //         'vuex': 'Vuex',
+        //         'vue-router': 'VueRouter',
+        //         'axios': 'axios',
+        //         'element-ui':'ELEMENT',
+        //         'lodash':'_',
+        //         'echarts':'echarts'
+        //     }
+        //     // 为生产环境修改配置...
+        //     config.plugins.push(
+        //        new TerserPlugin({
+        //            parallel: true,
+        //            sourceMap: true,
+        //            terserOptions: {
+        //                warnings: false,
+        //                compress: {
+        //                    drop_console: true,// 注释console
+        //                    drop_debugger: true, // 注释debugger
+        //                    pure_funcs: ["console.log"], //移除console
+        //                }
+        //            }
+        //        })
+        //    )
     },
     // vue-loader 配置项
     // https://vue-loader.vuejs.org/en/options.html
@@ -75,7 +75,7 @@ module.exports = {
                     modifyVars: {
                         'primary-color': '#20ad86', // 全局主色
                         'link-color': '#20ad86', // 链接色
-                        'border-color-base':'#20ad86', // 边框色
+                        'border-color-base': '#20ad86', // 边框色
                     },
                     javascriptEnabled: true,
                 },
@@ -119,7 +119,7 @@ module.exports = {
                 }
             }
         },
-        before: app => {}
+        before: app => { }
     },
     // 第三方插件配置
     pluginOptions: {

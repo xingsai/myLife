@@ -1,5 +1,5 @@
 {
-  "name": "vuedemo1",
+  "name": "mylife",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,8 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "file-saver": "^2.0.5",
+    "node-sass": "^6.0.1",
+    "vant": "^2.12.24",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vue-video-player": "^5.0.2",
@@ -22,13 +24,9 @@
     "@vue/cli-plugin-router": "~4.4.0",
     "@vue/cli-plugin-vuex": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
+    "mockjs": "^1.1.0",
+    "sass-loader": "^10.1.0",
     "script-loader": "^0.7.2",
     "vue-template-compiler": "^2.6.11"
-  },
-  "vue": {
-    "devServer": {
-      "port": 8088,
-      "open": true
-    }
   }
 }
