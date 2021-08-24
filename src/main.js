@@ -6,7 +6,7 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 //全局配置
 import http from '@/api/index'
-import './mock'
+//import './mock'
 
 //第三方包
 
